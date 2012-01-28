@@ -1,0 +1,13 @@
+#!/system/bin/sh
+
+tune2fs -o journal_data_writeback /dev/block/mmcblk0p1
+tune2fs -O ^has_journal /dev/block/mmcblk0p1
+tune2fs -o journal_data_writeback /dev/block/mmcblk0p8
+tune2fs -O ^has_journal /dev/block/mmcblk0p8
+tune2fs -o journal_data_writeback /block/path/to/system
+tune2fs -O ^has_journal /block/path/to/system
+tune2fs -o journal_data_writeback /block/path/to/cache
+tune2fs -O ^has_journal /block/path/to/cache
+tune2fs -o journal_data_writeback /block/path/to/data
+tune2fs -O ^has_journal /block/path/to/data
+

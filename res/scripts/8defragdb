@@ -1,0 +1,7 @@
+for i in \
+`find /data -iname "*.db"`
+do \
+sqlite3 $i 'VACUUM;'; 
+done
+mount -o rw -t tmpfs tmpfs /data/data/com.aurorasoftworks.quadrant.ui.standard
+mount -o rw -t tmpfs tmpfs /data/data/com.aurorasoftworks.quadrant.ui.advanced

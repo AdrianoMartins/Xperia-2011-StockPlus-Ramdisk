@@ -1,0 +1,21 @@
+#!/system/bin/sh
+#Sick Tweaks
+
+rm -f /cache/*.apk
+rm -f /cache/*.tmp
+rm -f /data/dalvik-cache/*.apk
+rm -f /data/dalvik-cache/*.tmp
+
+busybox rm -f /data/system/userbehavior.db
+busybox chmod 400 /data/system/usagestats/
+busybox chmod 400 /data/system/appusagestats/
+
+export sampling_rate=10000
+export up_threshold=65
+
+setprop ro.telephony.call_ring.delay 0
+setprop ring.delay 0
+setprop windowsmgr.support_rotation_270 true
+setprop ro.HOME_APP_ADJ 1
+setprop ro.HOME_APP_MEM 2048
+setprop dalvik.vm.heapsize 72m
