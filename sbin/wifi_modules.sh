@@ -10,4 +10,4 @@ echo "[ START ]" >> /data/local/tmp/log_adriano-modules.log
 /sbin/busybox depmod
 
 # DONE
-echo "[ DONE ]" >> /data/local/tmp/log_adriano-mods.log
+echo "[ DONE ]" >> /data/local/tmp/log_adriano-modules.log
